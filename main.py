@@ -1,22 +1,11 @@
-
+# Originally coded by Novaspirit Tech
+# Copy this code into your code.py file.
 import time
 import usb_hid
 from adafruit_hid.keycode import Keycode
 from adafruit_hid.keyboard import Keyboard
 import board
 import digitalio
-
-"""
-PICO W
-
-CODE RUNS ON PICO W via Thonny IDE with CircuitPython and adafruit HID 
-library folder from the adafruit library bundle
-
-
-
-"""
-
-
 # These are the corresponding GPIOs on the Pi Pico
 # that you soldered
 btn1_pin = board.GP0
@@ -114,61 +103,67 @@ keyboard = Keyboard(usb_hid.devices)
 # for additional help
 while True:
     if btn1.value:
-        keyboard.send(Keycode.ONE)
-        time.sleep(0.1)
+        keyboard.send(Keycode.CONTROL, Keycode.F10)
+        time.sleep(0.2)
     if btn2.value:
-        keyboard.send(Keycode.TWO)
-        time.sleep(0.1)
+        keyboard.send(Keycode.CONTROL, Keycode.F12)
+        time.sleep(0.2)
     if btn3.value:
         keyboard.send(Keycode.THREE)
-        time.sleep(0.1)
+        time.sleep(0.2)
     if btn4.value:
         keyboard.send(Keycode.FOUR)
-        time.sleep(0.1)
+        time.sleep(0.2)
     if btn5.value:
         keyboard.send(Keycode.FIVE)
-        time.sleep(0.1)
+        time.sleep(0.2)
     if btn6.value:
         keyboard.send(Keycode.SIX)
-        time.sleep(0.1)
+        time.sleep(0.2)
     if btn7.value:
         keyboard.send(Keycode.SEVEN)
-        time.sleep(0.1)
+        time.sleep(0.2)
     if btn8.value:
         keyboard.send(Keycode.EIGHT)
-        time.sleep(0.1)
-    if btn9.value:
-        keyboard.send(Keycode.NINE)
-        time.sleep(0.1)
-    if btn10.value:
+        time.sleep(0.2)
+        
+        
+    #THIRD ROW: 
+    if btn9.value: #PASS
+        keyboard.send(Keycode.P)
+        time.sleep(0.2)
+        
+    if btn10.value: #FOUL
+        keyboard.send(Keycode.F)
+        time.sleep(0.2)
+        
+    if btn11.value: #
         keyboard.send(Keycode.ONE)
-        keyboard.send(Keycode.ZERO)
+        keyboard.send(Keycode.ONE)
+        time.sleep(0.2)
+        
+    if btn12.value: #ENTER
+        keyboard.send(Keycode.ENTER)
         time.sleep(0.1)
         
-    if btn11.value:
-        keyboard.send(Keycode.ONE)
-        keyboard.send(Keycode.ONE)
-        time.sleep(0.1)
-    if btn12.value:
-        keyboard.send(Keycode.ONE)
-        keyboard.send(Keycode.TWO)
-        time.sleep(0.1)
+    #BOTTOM ROW FOR JUMPS (ALL POSSIBLE JUMPS) O, XO, XXO, XXX
     if btn13.value:
-        keyboard.send(Keycode.ONE)
-        keyboard.send(Keycode.THREE)
-        time.sleep(0.1)
+        keyboard.send(Keycode.O)
+        time.sleep(0.2)
     if btn14.value:
-        keyboard.send(Keycode.ONE)
-        keyboard.send(Keycode.FOUR)
-        time.sleep(0.1)
+        keyboard.send(Keycode.X)
+        keyboard.send(Keycode.O)
+        time.sleep(0.2)
     if btn15.value:
-        keyboard.send(Keycode.ONE)
-        keyboard.send(Keycode.FIVE)
-        time.sleep(0.1)
+        keyboard.send(Keycode.X)
+        keyboard.send(Keycode.X)
+        keyboard.send(Keycode.O)
+        time.sleep(0.2)
     if btn16.value:
-        keyboard.send(Keycode.ONE)
-        keyboard.send(Keycode.SIX)
-        time.sleep(0.1)
+        keyboard.send(Keycode.X)
+        keyboard.send(Keycode.X)
+        keyboard.send(Keycode.X)
+        time.sleep(0.2)
         time.sleep(0.1)
     
 
