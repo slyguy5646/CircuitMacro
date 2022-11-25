@@ -1,13 +1,13 @@
-# Originally coded by Novaspirit Tech
-# Copy this code into your code.py file.
+
 import time
 import usb_hid
 from adafruit_hid.keycode import Keycode
 from adafruit_hid.keyboard import Keyboard
 import board
 import digitalio
-# These are the corresponding GPIOs on the Pi Pico
-# that you soldered
+# These are the corresponding GPIOs on the board
+# you may need to change the type of pin depending on board (ex. instead of GP.. you might need to use D..)
+
 btn1_pin = board.GP0
 btn2_pin = board.GP1
 btn3_pin = board.GP2
@@ -26,7 +26,7 @@ btn15_pin = board.GP14
 btn16_pin = board.GP15
 
 
-
+#assignments
 btn1 = digitalio.DigitalInOut(btn1_pin)
 btn1.direction = digitalio.Direction.INPUT
 btn1.pull = digitalio.Pull.DOWN
@@ -93,14 +93,9 @@ btn16.pull = digitalio.Pull.DOWN
 
 
 
-
 keyboard = Keyboard(usb_hid.devices)
-# below are the key values that you can change to
-# fit your preferences. Change Keycode.ONE for example to
-# (Keycode.CONTROL, Keycode.F4) for CTRL + F4
-# on the first button.
-# See the official CircuitPython docs
-# for additional help
+
+#the main macropad loop that will react to any key presses and execute their intended input
 while True:
     #top row
     if btn1.value:
