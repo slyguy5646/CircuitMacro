@@ -102,6 +102,7 @@ keyboard = Keyboard(usb_hid.devices)
 # See the official CircuitPython docs
 # for additional help
 while True:
+    #top row
     if btn1.value:
         keyboard.send(Keycode.CONTROL, Keycode.F10)
         time.sleep(0.2)
@@ -109,22 +110,25 @@ while True:
         keyboard.send(Keycode.CONTROL, Keycode.F12)
         time.sleep(0.2)
     if btn3.value:
-        keyboard.send(Keycode.THREE)
+        # keyboard.send(Keycode.THREE)
         time.sleep(0.2)
+        
     if btn4.value:
-        keyboard.send(Keycode.FOUR)
+        keyboard.send(Keycode.ENTER)
         time.sleep(0.2)
+
+    #second row (arrow keys)
     if btn5.value:
-        keyboard.send(Keycode.FIVE)
+        keyboard.send(Keycode.RIGHT)
         time.sleep(0.2)
     if btn6.value:
-        keyboard.send(Keycode.SIX)
+        keyboard.send(Keycode.LEFT)
         time.sleep(0.2)
     if btn7.value:
-        keyboard.send(Keycode.SEVEN)
+        keyboard.send(Keycode.UP)
         time.sleep(0.2)
     if btn8.value:
-        keyboard.send(Keycode.EIGHT)
+        keyboard.send(Keycode.DOWN)
         time.sleep(0.2)
         
         
@@ -137,13 +141,12 @@ while True:
         keyboard.send(Keycode.F)
         time.sleep(0.2)
         
-    if btn11.value: #
-        keyboard.send(Keycode.ONE)
-        keyboard.send(Keycode.ONE)
+    if btn11.value: #N
+        keyboard.send(Keycode.N)
         time.sleep(0.2)
         
-    if btn12.value: #ENTER
-        keyboard.send(Keycode.ENTER)
+    if btn12.value: #S
+        keyboard.send(Keycode.S)
         time.sleep(0.1)
         
     #BOTTOM ROW FOR JUMPS (ALL POSSIBLE JUMPS) O, XO, XXO, XXX
