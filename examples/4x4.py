@@ -112,7 +112,7 @@ while True:
         keyboard.send(Keycode.ENTER)
         time.sleep(0.2)
 
-    #second row (arrow keys)
+    #second row
     if btn5.value:
         keyboard.send(Keycode.RIGHT)
         time.sleep(0.2)
@@ -127,7 +127,7 @@ while True:
         time.sleep(0.2)
         
         
-    #THIRD ROW: 
+    #third row: 
     if btn9.value: #PASS
         keyboard.send(Keycode.P)
         time.sleep(0.2)
@@ -144,7 +144,7 @@ while True:
         keyboard.send(Keycode.S)
         time.sleep(0.1)
         
-    #BOTTOM ROW FOR JUMPS (ALL POSSIBLE JUMPS) O, XO, XXO, XXX
+    #fourth row
     if btn13.value:
         keyboard.send(Keycode.O)
         time.sleep(0.2)
