@@ -96,7 +96,7 @@ btn16.pull = digitalio.Pull.DOWN
 
 keyboard = Keyboard(usb_hid.devices)
 
-#the main macropad loop that will react to any key presses and input their intended input
+#the main macropad loop that will react to any key presses and execute their intended input
 while True:
     #top row
     if btn1.value:

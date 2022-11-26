@@ -5,24 +5,23 @@ from adafruit_hid.keycode import Keycode
 from adafruit_hid.keyboard import Keyboard
 import board
 import digitalio
+
 # These are the corresponding GPIOs on the board
-# you may need to change the type of pin depending on board (ex. instead of GP.. you might need to use D.. or A..) 
+# you may need to change the type of pin depending on board (ex. instead of board.GP.. you might need to use board.D.. or board.A..) 
 # checkout examples/2x1.py for an example of this
-
-
-btn1_pin = board.GP0
+btn1_pin = board.GP0 #coresponds ot GPIO 1 on the board
 btn2_pin = board.GP1
 # btn3_pin = board.GP2      #
 # btn4_pin = board.GP3      #
 # btn5_pin = board.GP4      #
-# btn6_pin = board.GP5      #
+# btn6_pin = board.GP5      #       ############################################################################################
 # btn7_pin = board.GP6      #
 # btn8_pin = board.GP7      #
-# btn9_pin = board.GP8      #       YOU CAN UNCOMMENT THESE LINES IF YOU NEED MORE KEYS
+# btn9_pin = board.GP8      #       YOU CAN ALWAYS UNCOMMENT THESE LINES IF YOU NEED MORE KEYS
 # btn10_pin = board.GP9     #       (make sure to uncomment the corresponding lines below that configure and input these keys)
-# btn11_pin = board.GP10    #
+# btn11_pin = board.GP10    #       
 # btn12_pin = board.GP11    #
-# btn13_pin = board.GP12    #
+# btn13_pin = board.GP12    #       ############################################################################################
 # btn14_pin = board.GP13    #
 # btn15_pin = board.GP14    #
 # btn16_pin = board.GP15    #
@@ -94,7 +93,7 @@ btn2.pull = digitalio.Pull.DOWN
 # btn16.pull = digitalio.Pull.DOWN
 
 
-
+#initialize keyboard object
 keyboard = Keyboard(usb_hid.devices)
 
 #the main macropad loop that will react to any key presses and execute their intended input
@@ -135,11 +134,11 @@ while True:
     #     keyboard.send(Keycode.NINE)
     #     time.sleep(0.2)
         
-    # if btn10.value: #FOUL
+    # if btn10.value: 
     #     keyboard.send(Keycode.ONE, Keycode.ZERO)
     #     time.sleep(0.2)
         
-    # if btn11.value: #N
+    # if btn11.value: 
     #     keyboard.send(Keycode.ONE, Keycode.ONE)
     #     time.sleep(0.2)
         
