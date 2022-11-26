@@ -65,7 +65,7 @@
 | `.RIGHT_BRACKET`     |  ] and }       |
 | `.SEMICOLON`     |  ] and }       |
 
-### Full keybindings that are not mentioned in this guide can be found on at the official documentation [here](https://docs.circuitpython.org/projects/hid/en/latest/api.html#adafruit_hid.keycode.Keycode). 
+### A full list of keybindings including those not mentioned in this guide can be found at the official documentation [here](https://docs.circuitpython.org/projects/hid/en/latest/api.html#adafruit_hid.keycode.Keycode). 
 
 
 
