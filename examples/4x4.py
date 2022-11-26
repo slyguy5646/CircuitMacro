@@ -5,9 +5,10 @@ from adafruit_hid.keycode import Keycode
 from adafruit_hid.keyboard import Keyboard
 import board
 import digitalio
-# These are the corresponding GPIOs on the board
-# you may need to change the type of pin depending on board (ex. instead of GP.. you might need to use D..)
 
+# These are the corresponding GPIOs on the board
+# you may need to change the type of pin depending on board (ex. instead of board.GP1 you might need to use board.D1)
+#checkout 2x1.py for an example
 btn1_pin = board.GP0
 btn2_pin = board.GP1
 btn3_pin = board.GP2
@@ -95,7 +96,7 @@ btn16.pull = digitalio.Pull.DOWN
 
 keyboard = Keyboard(usb_hid.devices)
 
-#the main macropad loop that will react to any key presses and execute their intended input
+#the main macropad loop that will react to any key presses and input their intended input
 while True:
     #top row
     if btn1.value:
@@ -105,7 +106,7 @@ while True:
         keyboard.send(Keycode.CONTROL, Keycode.F12)
         time.sleep(0.2)
     if btn3.value:
-        # keyboard.send(Keycode.THREE)
+        keyboard.send(Keycode.THREE)
         time.sleep(0.2)
         
     if btn4.value:
@@ -128,19 +129,19 @@ while True:
         
         
     #third row: 
-    if btn9.value: #PASS
+    if btn9.value: 
         keyboard.send(Keycode.P)
         time.sleep(0.2)
         
-    if btn10.value: #FOUL
+    if btn10.value: 
         keyboard.send(Keycode.F)
         time.sleep(0.2)
         
-    if btn11.value: #N
+    if btn11.value: 
         keyboard.send(Keycode.N)
         time.sleep(0.2)
         
-    if btn12.value: #S
+    if btn12.value: 
         keyboard.send(Keycode.S)
         time.sleep(0.1)
         
