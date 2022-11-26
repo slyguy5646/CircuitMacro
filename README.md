@@ -8,6 +8,9 @@
 #### The `KeycodeValues.md` file:
  - A guide to almost all possible keymappings for your reference
 
+### The `adafruit_hid` directory:
+ - A CircuitPython library that is used by this guide
+
 ## Setup Guide
 
 ### Configuration:
