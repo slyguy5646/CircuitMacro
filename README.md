@@ -1,4 +1,4 @@
-# MacroPad
+# CircuitMacro 🐍 ⌨️
 
 ### A collection of RP2040/Circuit Python based macropad code
 #### The `examples` directory (example macropad configurations): 
