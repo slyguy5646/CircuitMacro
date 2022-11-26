@@ -26,6 +26,6 @@
    
 2.  Next put the library on your RP2040 or CircuitPython board by copying it to the under the `lib` directory on your board.
 
-3. Next, start coding! You can grab an example file from the `examples` directory to see what some MacroPad software could look like.
+3. Next, start coding! You can take a look at an example  file from the `examples` directory to see what some MacroPad software might look like. When you are ready to write code for your own macro pad, you can grab the `template.py` file. This file sets up and configures 16 keys (this is tedious and `template.py` will save you some time). From their, you can check out the `KeycodeValues.md` file for a detailed explanation on what each `Keycode` value does.
    
 4.  Add your finished CircuitPython file to the root directory of your RP2040 or CircuitPython board and rename it to `main.py` or `code.py` (the name depends on the board so you may have to experiment) so that the MacroPad will work as soon as it is plugged in and you won't have to run the your script everytime.
