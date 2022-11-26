@@ -19,7 +19,7 @@
   
    -  If you don't have CircuitPython setup yet, a great guide can be found [here](https://learn.adafruit.com/welcome-to-circuitpython/installing-circuitpython)
   
-    -  If you have an editor like VS Code that will work fine. I personally recommend Thonny because you can execute code on and interact with your board right from the editor. A download and setup tutorial is available [here](https://www.youtube.com/watch?v=_ouzuI_ZPLs&ab_channel=CoreElectronics) (you can skip to about the 0:40 mark to get to the tutorial). This guide uses MicroPython but make sure you select CircuitPython as the interpreter for this guide to work.
+    -  If you have an editor like VS Code that will work fine. I personally recommend Thonny because you can execute code on and interact with your board right from the editor. A download and setup tutorial is available [here](https://www.youtube.com/watch?v=_ouzuI_ZPLs&ab_channel=CoreElectronics) (you can skip to about the 0:40 mark to get to the tutorial). The Thonny setup guide uses MicroPython but make sure you select CircuitPython as the interpreter for this guide to work.
   
 ### Software Setup:
 1.  Grab the `adafruit_hid` folder from this repository or from the official CircuitPython Libraries Bundle which includes all of the current CircuitPython libraries(You can download it [here](https://circuitpython.org/libraries)).
@@ -28,4 +28,4 @@
 
 3. Next, start coding! You can take a look at an example  file from the `examples` directory to see what some MacroPad software might look like. When you are ready to write code for your own macro pad, you can grab the `template.py` file. This file sets up and configures 16 keys (this is tedious and `template.py` takes care of this for you). Also, please read the comments in `template.py` if you have any code specific questions. This will save me from writing a long explanation here when it can be done with one line in the code. From their, you can check out the `KeycodeValues.md` file for a detailed explanation on what each `Keycode` value does.
    
-4.  Add your finished CircuitPython file to the root directory of your RP2040 or CircuitPython board and rename it to `main.py` or `code.py` (the name depends on the board so you may have to experiment) so that the MacroPad will work as soon as it is plugged in and you won't have to run the your script everytime.
+4.  Add your finished CircuitPython file to the root directory of your RP2040 or CircuitPython board and rename it to `main.py` or `code.py` (the name depends on the board so you may have to experiment). This name is a default name that your board will run on boot. This allows the macropad to work as soon as it is plugged into a computer and you won't have to run the script everytime you plug in your macropad.
