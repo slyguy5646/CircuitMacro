@@ -106,7 +106,7 @@ while True:
         keyboard.send(Keycode.CONTROL, Keycode.F12)
         time.sleep(0.2)
     if btn3.value:
-        # keyboard.send(Keycode.THREE)
+        keyboard.send(Keycode.THREE)
         time.sleep(0.2)
         
     if btn4.value:
@@ -115,16 +115,16 @@ while True:
 
     #second row
     if btn5.value:
-        keyboard.send(Keycode.RIGHT)
+        keyboard.send(Keycode.RIGHT_ARROW)
         time.sleep(0.2)
     if btn6.value:
-        keyboard.send(Keycode.LEFT)
+        keyboard.send(Keycode.LEFT_ARROW)
         time.sleep(0.2)
     if btn7.value:
-        keyboard.send(Keycode.UP)
+        keyboard.send(Keycode.UP_ARROW)
         time.sleep(0.2)
     if btn8.value:
-        keyboard.send(Keycode.DOWN)
+        keyboard.send(Keycode.DOWN_ARROW)
         time.sleep(0.2)
         
         
