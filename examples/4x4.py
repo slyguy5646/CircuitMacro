@@ -106,7 +106,7 @@ while True:
         keyboard.send(Keycode.CONTROL, Keycode.F12)
         time.sleep(0.2)
     if btn3.value:
-        keyboard.send(Keycode.THREE)
+        # keyboard.send(Keycode.THREE)
         time.sleep(0.2)
         
     if btn4.value:
